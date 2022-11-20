@@ -27,7 +27,7 @@ class MainFragment : Fragment() {
     }
 }
 
-class Watcher(var editText: TextInputEditText, val message: String) : TextWatcher {
+class Watcher(private var editText: TextInputEditText, private val message: String) : TextWatcher {
     override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
         editText.error = null
     }
@@ -38,5 +38,4 @@ class Watcher(var editText: TextInputEditText, val message: String) : TextWatche
     }
 
     override fun afterTextChanged(p0: Editable?) {}
-
 }
